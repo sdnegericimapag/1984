@@ -40,13 +40,16 @@
   width: 100%;
   background: url('img/bannercmpg.jpg') center/cover no-repeat;
   height: 240px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   color: white;
   font-size: 18px;
   font-weight: bold;
   text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+.banner-text {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }
     main {
       padding: 40px;
@@ -85,7 +88,10 @@
     </nav>
   </header>
 
-  <div class="banner">Selamat Datang di Website Sekolah</div>
+  <div class="banner">
+  <div class="banner-text">Beranda</div>
+</div>
+
 
   <main>
     <section>
