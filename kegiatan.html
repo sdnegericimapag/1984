@@ -19,19 +19,24 @@
     }
     nav {
       background-color: #34495e;
-      overflow: hidden;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar {
+      display: flex;
+      justify-content: flex-start;
+      padding: 0 16px;
     }
     .dropdown {
-      float: left;
-      overflow: hidden;
+      position: relative;
     }
     .dropbtn {
       font-size: 16px;
-      border: none;
-      outline: none;
       color: white;
       padding: 14px 16px;
-      background-color: inherit;
+      background: none;
+      border: none;
       cursor: pointer;
     }
     .dropdown-content {
@@ -39,7 +44,7 @@
       position: absolute;
       background-color: #f1f1f1;
       min-width: 200px;
-      z-index: 1;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     }
     .dropdown-content a {
       color: black;
@@ -50,26 +55,11 @@
     .dropdown-content a:hover {
       background-color: #ddd;
     }
-    .dropdown:hover .dropdown-content {
+    .show {
       display: block;
     }
     section {
       padding: 20px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background-color: #ecf0f1;
     }
   </style>
 </head>
@@ -80,116 +70,57 @@
   </header>
 
   <nav>
-    <div class="dropdown">
-      <button class="dropbtn">Kegiatan ▼</button>
-      <div class="dropdown-content">
-        <a href="#sekolah">Kegiatan Sekolah</a>
-        <a href="#ekskul">Ekstrakurikuler</a>
-        <a href="#sosial">Kegiatan Sosial</a>
-        <a href="#tahunan">Kegiatan Tahunan</a>
+    <div class="navbar">
+      <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">Kegiatan ▼</button>
+        <div id="dropdownMenu" class="dropdown-content">
+          <a href="#sekolah">Kegiatan Sekolah</a>
+          <a href="#ekskul">Ekstrakurikuler</a>
+          <a href="#sosial">Kegiatan Sosial</a>
+          <a href="#tahunan">Kegiatan Tahunan</a>
+        </div>
       </div>
     </div>
   </nav>
 
   <section id="sekolah">
     <h2>Kegiatan Sekolah</h2>
-    <p>Berikut adalah daftar kegiatan sekolah:</p>
-    <table>
-      <tr>
-        <th>No</th>
-        <th>Nama Kegiatan</th>
-        <th>Waktu Pelaksanaan</th>
-        <th>Penanggung Jawab</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Upacara Bendera</td>
-        <td>Setiap Senin</td>
-        <td>Wali Kelas</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Belajar Kelompok</td>
-        <td>Setiap Jumat</td>
-        <td>Guru Kelas</td>
-      </tr>
-    </table>
+    <p>Deskripsi kegiatan sekolah...</p>
   </section>
 
   <section id="ekskul">
     <h2>Ekstrakurikuler</h2>
-    <p>Berikut adalah kegiatan ekstrakurikuler:</p>
-    <table>
-      <tr>
-        <th>No</th>
-        <th>Nama Ekskul</th>
-        <th>Hari</th>
-        <th>Pelatih</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Pramuka</td>
-        <td>Sabtu</td>
-        <td>Pak Ade</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Olahraga</td>
-        <td>Rabu</td>
-        <td>Bu Siti</td>
-      </tr>
-    </table>
+    <p>Deskripsi kegiatan ekstrakurikuler...</p>
   </section>
 
   <section id="sosial">
     <h2>Kegiatan Sosial</h2>
-    <p>Berikut adalah kegiatan sosial yang dilakukan:</p>
-    <table>
-      <tr>
-        <th>No</th>
-        <th>Nama Kegiatan</th>
-        <th>Tanggal</th>
-        <th>Tujuan</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Bakti Sosial</td>
-        <td>10 Agustus</td>
-        <td>Lingkungan Sekitar</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Donasi Buku</td>
-        <td>15 Oktober</td>
-        <td>Panti Asuhan</td>
-      </tr>
-    </table>
+    <p>Deskripsi kegiatan sosial...</p>
   </section>
 
   <section id="tahunan">
     <h2>Kegiatan Tahunan</h2>
-    <p>Berikut adalah agenda tahunan sekolah:</p>
-    <table>
-      <tr>
-        <th>No</th>
-        <th>Nama Kegiatan</th>
-        <th>Bulan</th>
-        <th>Deskripsi</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Class Meeting</td>
-        <td>Desember</td>
-        <td>Kompetisi antar kelas</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Perpisahan</td>
-        <td>Juni</td>
-        <td>Acara pelepasan siswa kelas 6</td>
-      </tr>
-    </table>
+    <p>Deskripsi kegiatan tahunan...</p>
   </section>
+
+  <script>
+    function toggleDropdown() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    // Tutup dropdown jika klik di luar
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          let openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
 
 </body>
 </html>
