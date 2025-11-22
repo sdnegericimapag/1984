@@ -4,89 +4,117 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kegiatan SD Negeri Cimapag</title>
-
   <style>
+    /* ====== CSS HALAMAN UMUM ====== */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      background: #f1f4f9;
     }
 
     header {
-      background: #0b57cf;
+      background: #004a99;
       color: white;
-      padding: 15px 40px;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    header .logo {
+    .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
     }
 
-    header img {
-      height: 40px;
-      width: 40px;
-      object-fit: cover;
-    }
-
-    /* NAVBAR FLEX */
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    .logo img {
+      height: 45px;
+      margin-right: 10px;
     }
 
     nav a {
       color: white;
+      margin-left: 15px;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: bold;
     }
 
-    /* DROPDOWN FIX */
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .banner {
+      background: #0066cc;
+      padding: 40px;
+      text-align: center;
+      color: white;
+    }
+
+    main {
+      padding: 20px 30px;
+    }
+
+    section {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* ====== CSS DROPDOWN BARU ====== */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      position: relative;
+    }
+
     .dropdown {
       position: relative;
-      display: inline-block;
     }
 
     .dropbtn {
-      background: none;
-      border: none;
       color: white;
-      font-size: 16px;
-      font-weight: 500;
+      text-decoration: none;
+      font-weight: bold;
       cursor: pointer;
       padding: 0;
+      margin-left: 15px;
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
-      top: 35px;             /* TURUN KE BAWAH, tidak menumpuk */
+      top: 100%;          /* tepat di bawah tombol */
       left: 0;
-      background-color: white;
-      min-width: 180px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      padding: 6px 0;
-      z-index: 5;
+      background: white;
+      min-width: 160px;   /* kotak pas */
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 100;
     }
 
     .dropdown-content a {
-      color: #0b57cf;
-      padding: 10px 16px;
       display: block;
+      padding: 10px 16px;
+      color: #004a99;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: bold;
+      white-space: nowrap;
     }
 
     .dropdown-content a:hover {
-      background: #e6edff;
+      background-color: #e6f0ff;
     }
 
     .dropdown:hover .dropdown-content {
@@ -94,87 +122,41 @@
     }
 
     .dropdown:hover .dropbtn {
-      color: #cfe0ff;
+      color: #d2e6ff;
     }
 
-    /* BANNER */
-    .banner {
-      width: 100%;
-      background: url('img/bannercmpg.jpg') center/cover no-repeat;
-      height: 240px;
-      position: relative;
-    }
-
-    .banner-text {
-      position: absolute;
-      right: 60px;
-      bottom: 30px;
-      font-size: 22px;
-      font-weight: bold;
-      color: white;
-      font-style: italic;
-      text-shadow:
-        0 3px 6px rgba(221,221,221,1),
-        0 0 10px rgba(0,0,0,0.6);
-    }
-
-    /* SECTION */
-    main {
-      padding: 40px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    section {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      margin-bottom: 25px;
-    }
-
-    footer {
-      background: #0b57cf;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-    }
   </style>
 </head>
 
 <body>
-
   <header>
     <div class="logo">
       <img src="img/logosekolah.png" alt="Logo Sekolah" />
       SD NEGERI CIMAPAG
     </div>
 
-   <nav>
-  <a href="index.html">Beranda</a>
-  <a href="profil.html">Profil</a>
-  <a href="guru.html">Guru</a>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="profil.html">Profil</a>
+      <a href="guru.html">Guru</a>
 
-  <div class="dropdown">
-    <a href="#" class="dropbtn">Kegiatan ▼</a>
-    <div class="dropdown-content">
-      <a href="kegiatan-belajar.html">Kegiatan Belajar</a>
-      <a href="ekstrakurikuler.html">Ekstrakurikuler</a>
-      <a href="prestasi.html">Prestasi</a>
-      <a href="agenda.html">Agenda Sekolah</a>
-    </div>
-  </div>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Kegiatan ▼</a>
+        <div class="dropdown-content">
+          <a href="kegiatan-belajar.html">Kegiatan Belajar</a>
+          <a href="ekstrakurikuler.html">Ekstrakurikuler</a>
+          <a href="prestasi.html">Prestasi</a>
+          <a href="agenda.html">Agenda Sekolah</a>
+        </div>
+      </div>
 
-  <a href="dokumentasi.html">Dokumentasi</a>
-  <a href="kontak.html">Kontak</a>
-</nav>
-
-
+      <a href="dokumentasi.html">Dokumentasi</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
   </header>
 
   <div class="banner">
-    <div class="banner-text">Profil</div>
+    <div class="banner-text">Kegiatan</div>
   </div>
 
   <main>
@@ -182,13 +164,25 @@
       <h2>Kegiatan Belajar</h2>
       <p>Isi detail kegiatan belajar di sini...</p>
     </section>
+
+    <section>
+      <h2>Ekstrakurikuler</h2>
+      <p>Isi kegiatan ekstrakurikuler di sini...</p>
+    </section>
+
+    <section>
+      <h2>Prestasi</h2>
+      <p>Isi prestasi sekolah di sini...</p>
+    </section>
+
+    <section>
+      <h2>Agenda Sekolah</h2>
+      <p>Isi agenda sekolah di sini...</p>
+    </section>
   </main>
 
   <footer>
     © 2025 SD Negeri Cimapag
   </footer>
-
 </body>
 </html>
-
-
