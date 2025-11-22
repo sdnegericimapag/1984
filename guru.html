@@ -19,6 +19,18 @@
         justify-content: space-between;
         align-items: center;
     }
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    header img {
+      height: 40px;
+      width: 40px;
+      object-fit: cover;
+    }
 
     nav a {
         color: white;
@@ -67,7 +79,11 @@
 <body>
 
 <header>
-    <div style="font-size: 20px; font-weight: bold;">SD NEGERI CIMAPAG</div>
+  <div class="logo">
+  <img src="img/logosekolah.png" alt="Logo Sekolah" />
+  SD NEGERI CIMAPAG
+    </div>
+
     <nav>
       <a href="index.html">Beranda</a>
       <a href="profil.html">Profil</a>
@@ -128,4 +144,5 @@
 
 </body>
 </html>
+
 
