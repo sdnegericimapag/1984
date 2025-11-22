@@ -20,69 +20,61 @@ footer { background:#003366; color:white; text-align:center; padding:15px; margi
     margin-right: 10px; /* jarak antara logo dan tulisan */
 }
 
-/* ===================== DROPDOWN FIX ===================== */
-
-/* Pastikan NAV pakai flex tapi tidak menutupi dropdown */
+/* Navbar Flex */
 nav {
     display: flex;
     align-items: center;
     gap: 15px;
     position: relative;
-    z-index: 5;
 }
 
-/* --- Container tombol dropdown --- */
+/* Dropdown Container */
 .dropdown {
     position: relative;
 }
 
-/* --- Tombol dropdown (seperti link navbar) --- */
+/* Dropdown tombol */
 .dropbtn {
-    background: none;
-    border: none;
     color: white;
-    font-size: 16px;
+    text-decoration: none;
     font-weight: bold;
     cursor: pointer;
     padding: 0;
-    margin-left: 15px;
 }
 
-/* --- BOX dropdown --- */
+/* Dropdown box */
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 28px;                /* jarak HARUS kecil agar hover tidak putus */
+    top: 100%;           /* tepat di bawah tombol */
     left: 0;
     background: white;
-    min-width: 170px;
+    min-width: 180px;     /* batasi lebar */
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    padding: 5px 0;
-    z-index: 20;              /* supaya tidak tertutup elemen lain */
-    overflow: hidden;         /* agar box tidak melebar */
+    z-index: 100;
 }
 
-/* --- link di dalam dropdown --- */
+/* Dropdown link */
 .dropdown-content a {
     display: block;
     padding: 10px 16px;
-    text-decoration: none;
     color: #004a99;
+    text-decoration: none;
     font-weight: bold;
-    white-space: nowrap;      /* supaya kotak tidak melebar */
+    white-space: nowrap; /* agar tidak melebar */
 }
 
 .dropdown-content a:hover {
     background: #e6f0ff;
 }
 
-/* --- TAMPILKAN dropdown saat HOVER --- */
+/* Tampilkan dropdown saat hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Hover tombol sedikit berubah warna */
+/* Hover tombol */
 .dropdown:hover .dropbtn {
     color: #d2e6ff;
 }
