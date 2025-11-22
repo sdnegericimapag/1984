@@ -9,6 +9,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f9f9f9;
     }
     header {
       background-color: #2c3e50;
@@ -20,11 +21,11 @@
       background-color: #34495e;
       overflow: hidden;
     }
-    nav .dropdown {
+    .dropdown {
       float: left;
       overflow: hidden;
     }
-    nav .dropbtn {
+    .dropbtn {
       font-size: 16px;
       border: none;
       outline: none;
@@ -33,29 +34,42 @@
       background-color: inherit;
       cursor: pointer;
     }
-    nav .dropdown-content {
+    .dropdown-content {
       display: none;
       position: absolute;
       background-color: #f1f1f1;
       min-width: 200px;
       z-index: 1;
     }
-    nav .dropdown-content a {
-      float: none;
+    .dropdown-content a {
       color: black;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
-      text-align: left;
     }
-    nav .dropdown-content a:hover {
+    .dropdown-content a:hover {
       background-color: #ddd;
     }
-    nav .dropdown:hover .dropdown-content {
+    .dropdown:hover .dropdown-content {
       display: block;
     }
     section {
       padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #ecf0f1;
     }
   </style>
 </head>
@@ -79,22 +93,102 @@
 
   <section id="sekolah">
     <h2>Kegiatan Sekolah</h2>
-    <p>Deskripsi kegiatan yang dilakukan di lingkungan sekolah.</p>
+    <p>Berikut adalah daftar kegiatan sekolah:</p>
+    <table>
+      <tr>
+        <th>No</th>
+        <th>Nama Kegiatan</th>
+        <th>Waktu Pelaksanaan</th>
+        <th>Penanggung Jawab</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Upacara Bendera</td>
+        <td>Setiap Senin</td>
+        <td>Wali Kelas</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Belajar Kelompok</td>
+        <td>Setiap Jumat</td>
+        <td>Guru Kelas</td>
+      </tr>
+    </table>
   </section>
 
   <section id="ekskul">
     <h2>Ekstrakurikuler</h2>
-    <p>Informasi tentang kegiatan ekstrakurikuler yang tersedia.</p>
+    <p>Berikut adalah kegiatan ekstrakurikuler:</p>
+    <table>
+      <tr>
+        <th>No</th>
+        <th>Nama Ekskul</th>
+        <th>Hari</th>
+        <th>Pelatih</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Pramuka</td>
+        <td>Sabtu</td>
+        <td>Pak Ade</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Olahraga</td>
+        <td>Rabu</td>
+        <td>Bu Siti</td>
+      </tr>
+    </table>
   </section>
 
   <section id="sosial">
     <h2>Kegiatan Sosial</h2>
-    <p>Berbagai kegiatan sosial yang melibatkan siswa dan masyarakat.</p>
+    <p>Berikut adalah kegiatan sosial yang dilakukan:</p>
+    <table>
+      <tr>
+        <th>No</th>
+        <th>Nama Kegiatan</th>
+        <th>Tanggal</th>
+        <th>Tujuan</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Bakti Sosial</td>
+        <td>10 Agustus</td>
+        <td>Lingkungan Sekitar</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Donasi Buku</td>
+        <td>15 Oktober</td>
+        <td>Panti Asuhan</td>
+      </tr>
+    </table>
   </section>
 
   <section id="tahunan">
     <h2>Kegiatan Tahunan</h2>
-    <p>Agenda kegiatan rutin yang diadakan setiap tahun.</p>
+    <p>Berikut adalah agenda tahunan sekolah:</p>
+    <table>
+      <tr>
+        <th>No</th>
+        <th>Nama Kegiatan</th>
+        <th>Bulan</th>
+        <th>Deskripsi</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Class Meeting</td>
+        <td>Desember</td>
+        <td>Kompetisi antar kelas</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Perpisahan</td>
+        <td>Juni</td>
+        <td>Acara pelepasan siswa kelas 6</td>
+      </tr>
+    </table>
   </section>
 
 </body>
