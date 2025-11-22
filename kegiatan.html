@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Halaman Kegiatan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #34495e;
+      overflow: hidden;
+    }
+    nav .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    nav .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      cursor: pointer;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 200px;
+      z-index: 1;
+    }
+    nav .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    nav .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    section {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Halaman Kegiatan</h1>
+  </header>
+
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Kegiatan ▼</button>
+      <div class="dropdown-content">
+        <a href="#sekolah">Kegiatan Sekolah</a>
+        <a href="#ekskul">Ekstrakurikuler</a>
+        <a href="#sosial">Kegiatan Sosial</a>
+        <a href="#tahunan">Kegiatan Tahunan</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="sekolah">
+    <h2>Kegiatan Sekolah</h2>
+    <p>Deskripsi kegiatan yang dilakukan di lingkungan sekolah.</p>
+  </section>
+
+  <section id="ekskul">
+    <h2>Ekstrakurikuler</h2>
+    <p>Informasi tentang kegiatan ekstrakurikuler yang tersedia.</p>
+  </section>
+
+  <section id="sosial">
+    <h2>Kegiatan Sosial</h2>
+    <p>Berbagai kegiatan sosial yang melibatkan siswa dan masyarakat.</p>
+  </section>
+
+  <section id="tahunan">
+    <h2>Kegiatan Tahunan</h2>
+    <p>Agenda kegiatan rutin yang diadakan setiap tahun.</p>
+  </section>
+
+</body>
+</html>
