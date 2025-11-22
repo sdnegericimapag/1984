@@ -20,45 +20,70 @@ footer { background:#003366; color:white; text-align:center; padding:15px; margi
     margin-right: 10px; /* jarak antara logo dan tulisan */
 }
 
-/* ===== CSS DROPDOWN TAMBAHAN ===== */
-nav { display:flex; align-items:center; gap:15px; }
+/* ===================== DROPDOWN FIX ===================== */
 
-.dropdown { position:relative; display:inline-block; }
+/* Pastikan NAV pakai flex tapi tidak menutupi dropdown */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    z-index: 5;
+}
 
+/* --- Container tombol dropdown --- */
+.dropdown {
+    position: relative;
+}
+
+/* --- Tombol dropdown (seperti link navbar) --- */
 .dropbtn {
-    background:none;
-    border:none;
-    color:white;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 15px;
 }
 
+/* --- BOX dropdown --- */
 .dropdown-content {
-    display:none;
-    position:absolute;
-    top:35px;
-    left:0;
-    background:white;
-    min-width:170px;
-    border-radius:6px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.15);
-    padding:5px 0;
-    z-index:10;
+    display: none;
+    position: absolute;
+    top: 28px;                /* jarak HARUS kecil agar hover tidak putus */
+    left: 0;
+    background: white;
+    min-width: 170px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 5px 0;
+    z-index: 20;              /* supaya tidak tertutup elemen lain */
+    overflow: hidden;         /* agar box tidak melebar */
 }
 
+/* --- link di dalam dropdown --- */
 .dropdown-content a {
-    color:#004a99;
-    padding:10px 16px;
-    display:block;
-    text-decoration:none;
-    font-weight:bold;
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #004a99;
+    font-weight: bold;
+    white-space: nowrap;      /* supaya kotak tidak melebar */
 }
 
 .dropdown-content a:hover {
-    background:#e6f0ff;
+    background: #e6f0ff;
 }
 
-.dropdown:hover .dropdown-content { display:block; }
+/* --- TAMPILKAN dropdown saat HOVER --- */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-.dropdown:hover .dropbtn { color:#cfe0ff; }
+/* Hover tombol sedikit berubah warna */
+.dropdown:hover .dropbtn {
+    color: #d2e6ff;
+}
+
