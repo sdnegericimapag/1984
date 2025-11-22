@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kegiatan SD Negeri Cimapag</title>
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f4f4;
     }
+
     header {
       background: #0b57cf;
       color: white;
@@ -18,6 +20,7 @@
       justify-content: space-between;
       align-items: center;
     }
+
     header .logo {
       display: flex;
       align-items: center;
@@ -25,40 +28,103 @@
       font-size: 20px;
       font-weight: bold;
     }
+
     header img {
       height: 40px;
       width: 40px;
       object-fit: cover;
     }
+
+    /* NAVBAR FLEX */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
     nav a {
       color: white;
-      margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
-    }	
+    }
+
+    /* DROPDOWN FIX */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;             /* TURUN KE BAWAH, tidak menumpuk */
+      left: 0;
+      background-color: white;
+      min-width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      padding: 6px 0;
+      z-index: 5;
+    }
+
+    .dropdown-content a {
+      color: #0b57cf;
+      padding: 10px 16px;
+      display: block;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .dropdown-content a:hover {
+      background: #e6edff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      color: #cfe0ff;
+    }
+
+    /* BANNER */
     .banner {
-  width: 100%;
-  background: url('img/bannercmpg.jpg') center/cover no-repeat;
-  height: 240px;
-  position: relative;
-}
-.banner-text {
-  position: absolute;
-  right: 60px;
-  bottom: 30px;
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  font-style: italic;
-  text-shadow: 
-    0 3px 6px rgba(221,221,221,221.0),
-    0 0 10px rgba(0,0,0,0.6);
-}
+      width: 100%;
+      background: url('img/bannercmpg.jpg') center/cover no-repeat;
+      height: 240px;
+      position: relative;
+    }
+
+    .banner-text {
+      position: absolute;
+      right: 60px;
+      bottom: 30px;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      font-style: italic;
+      text-shadow:
+        0 3px 6px rgba(221,221,221,1),
+        0 0 10px rgba(0,0,0,0.6);
+    }
+
+    /* SECTION */
     main {
       padding: 40px;
       max-width: 1100px;
       margin: auto;
     }
+
     section {
       background: white;
       padding: 30px;
@@ -66,6 +132,7 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
       margin-bottom: 25px;
     }
+
     footer {
       background: #0b57cf;
       color: white;
@@ -75,40 +142,49 @@
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <div class="logo">
       <img src="img/logosekolah.png" alt="Logo Sekolah" />
       SD NEGERI CIMAPAG
     </div>
-   <nav>
-  <a href="index.html">Beranda</a>
-  <a href="profil.html">Profil</a>
-  <a href="guru.html">Guru</a>
 
-  <div class="dropdown">
-    <button class="dropbtn">Kegiatan ▼</button>
-    <div class="dropdown-content">
-      <a href="kegiatan-belajar.html">Kegiatan Belajar</a>
-      <a href="ekstrakurikuler.html">Ekstrakurikuler</a>
-      <a href="prestasi.html">Prestasi</a>
-      <a href="agenda.html">Agenda Sekolah</a>
-    </div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="profil.html">Profil</a>
+      <a href="guru.html">Guru</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Kegiatan ▼</button>
+        <div class="dropdown-content">
+          <a href="kegiatan-belajar.html">Kegiatan Belajar</a>
+          <a href="ekstrakurikuler.html">Ekstrakurikuler</a>
+          <a href="prestasi.html">Prestasi</a>
+          <a href="agenda.html">Agenda Sekolah</a>
+        </div>
+      </div>
+
+      <a href="dokumentasi.html">Dokumentasi</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <div class="banner-text">Profil</div>
   </div>
 
-  <a href="dokumentasi.html">Dokumentasi</a>
-  <a href="kontak.html">Kontak</a>
-</nav>
+  <main>
+    <section>
+      <h2>Kegiatan Belajar</h2>
+      <p>Isi detail kegiatan belajar di sini...</p>
+    </section>
+  </main>
 
-<main>
-  <section>
-    <h2>Kegiatan Belajar</h2>
-    <p>Isi detail kegiatan belajar di sini...</p>
-  </section>
-</main>
-
-<footer>© 2025 SD Negeri Cimapag</footer>
+  <footer>
+    © 2025 SD Negeri Cimapag
+  </footer>
 
 </body>
 </html>
-
