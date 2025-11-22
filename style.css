@@ -19,3 +19,46 @@ footer { background:#003366; color:white; text-align:center; padding:15px; margi
     height: 45px; /* ukuran logo */
     margin-right: 10px; /* jarak antara logo dan tulisan */
 }
+
+/* ===== CSS DROPDOWN TAMBAHAN ===== */
+nav { display:flex; align-items:center; gap:15px; }
+
+.dropdown { position:relative; display:inline-block; }
+
+.dropbtn {
+    background:none;
+    border:none;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.dropdown-content {
+    display:none;
+    position:absolute;
+    top:35px;
+    left:0;
+    background:white;
+    min-width:170px;
+    border-radius:6px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    padding:5px 0;
+    z-index:10;
+}
+
+.dropdown-content a {
+    color:#004a99;
+    padding:10px 16px;
+    display:block;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.dropdown-content a:hover {
+    background:#e6f0ff;
+}
+
+.dropdown:hover .dropdown-content { display:block; }
+
+.dropdown:hover .dropbtn { color:#cfe0ff; }
