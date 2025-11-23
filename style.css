@@ -92,10 +92,7 @@ nav .dropbtn {
     0 0 10px rgba(0,0,0,0.6);
 }
 
-/* Jika kamu punya bagian banner, pastikan class .banner ada */
-.banner {
-  margin-bottom: 40px;
-}
+
 
 /* ===== CONTENT ===== */
 main {
@@ -111,12 +108,7 @@ section {
   margin-bottom: 25px;
 }
 
-/* Perbaikan jarak antar section */
-section {
-  margin-top: 40px;       /* jarak atas untuk section selain yang pertama */
-  margin-bottom: 40px;    /* jarak bawah untuk section */
-  /* menghapus margin horizontal yang besar */
-}
+
 /* ===== FOOTER ===== */
 footer {
   background: #0b57cf;
@@ -126,11 +118,7 @@ footer {
   margin-top: 20px;
 }
 
-/* Jarak section terakhir ke footer */
-footer {
-  margin-top: 40px;
-  padding-top: 20px;
-}
+
 
 /* Gaya untuk semua judul h2 */
 section h2 {
