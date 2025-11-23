@@ -115,6 +115,14 @@ footer {
   margin-top: 20px;
 }
 
-h2 {
-  text-decoration: underline;
+/* Gaya untuk semua judul h2 */
+section h2 {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #214a8a; /* warna biru elegan */
+  border-bottom: 4px solid #214a8a;
 }
+
