@@ -103,6 +103,23 @@
     .dropdown:hover .dropbtn {
       color: #d2e6ff;
     }
+     .section-wrapper {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+    .section-card {
+      flex: 1;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      border: 2px solid #e2e6ef;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .section-card.large {
+      flex: 2;
+    }
   </style>
 </head>
 <body>
@@ -137,28 +154,18 @@
   <div class="banner-text">Beranda</div>
 </div>
 
-
   <main>
-    <section>
-      <h2>Profil Singkat Sekolah</h2>
-      <p>
-        SD 
-      </p>
-    </section>
+   <div class="section-wrapper">
+  <section class="section-card large">
+    <h2>Profil Singkat Sekolah</h2>
+    <p>SD ..............</p>
+  </section>
 
-    <section>
-      <h2>Sejarah Singkat</h2>
-      <p>
-        SD 
-      </p>
-    </section>
-
-    <section>
-  <h2>Tujuan</h2>
-
-</section>
-
-    
+  <section class="section-card">
+    <h2>Berita & Informasi</h2>
+    <p>Info terbaru ..............</p>
+  </section>
+</div> 
   </main>
 <footer style="margin-top: 60px; background: #F0FAFE; padding: 50px 25px; border-top: 2px solid #e1e5eb;">
   <div style="max-width: 900px; margin: auto;">
