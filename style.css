@@ -131,14 +131,14 @@ section h2:hover {
   color: #d4a017;
   transition: 0.3s;
 }
-
-/* Jarak konsisten antar section */
+/* Perbaikan jarak antar section */
 section {
-  margin: 40px auto;
-  max-width: 1200px;
+  margin-top: 40px;       /* jarak atas untuk section selain yang pertama */
+  margin-bottom: 40px;    /* jarak bawah untuk section */
+  /* menghapus margin horizontal yang besar */
 }
 
-/* Jarak banner ke section pertama */
+/* Jika kamu punya bagian banner, pastikan class .banner ada */
 .banner {
   margin-bottom: 40px;
 }
@@ -146,4 +146,6 @@ section {
 /* Jarak section terakhir ke footer */
 footer {
   margin-top: 40px;
+  padding-top: 20px;
 }
+
