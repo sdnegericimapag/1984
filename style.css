@@ -126,3 +126,8 @@ section h2 {
   border-bottom: 4px solid #214a8a;
 }
 
+section h2:hover {
+  border-bottom-color: #d4a017; /* warna emas */
+  color: #d4a017;
+  transition: 0.3s;
+}
