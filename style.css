@@ -136,35 +136,3 @@ section h2:hover {
   color: #d4a017;
   transition: 0.3s;
 }
-
-/* ===== JARAK KONSISTEN ===== */
-
-/* Jarak banner ke section pertama */
-.banner {
-  margin-bottom: 60px;
-}
-
-/* Jarak antar section */
-section + section {
-  margin-top: 20px;
-}
-
-/* Jarak section terakhir ke footer */
-footer {
-  margin-top: 60px;
-}
-
-/* Responsif supaya tidak terlalu melebar di HP */
-@media (max-width: 600px) {
-  main {
-    padding: 20px;
-  }
-  section {
-    padding: 20px;
-  }
-}
-
-
-
-
-
