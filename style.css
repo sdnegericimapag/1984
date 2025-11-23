@@ -141,17 +141,17 @@ section h2:hover {
 
 /* Jarak banner ke section pertama */
 .banner {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 
 /* Jarak antar section */
 section + section {
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 /* Jarak section terakhir ke footer */
 footer {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 /* Responsif supaya tidak terlalu melebar di HP */
