@@ -131,3 +131,19 @@ section h2:hover {
   color: #d4a017;
   transition: 0.3s;
 }
+
+/* Jarak konsisten antar section */
+section {
+  margin: 60px auto;
+  max-width: 1200px;
+}
+
+/* Jarak banner ke section pertama */
+.banner {
+  margin-bottom: 60px;
+}
+
+/* Jarak section terakhir ke footer */
+footer {
+  margin-top: 60px;
+}
