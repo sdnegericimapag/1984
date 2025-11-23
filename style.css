@@ -137,6 +137,32 @@ section h2:hover {
   transition: 0.3s;
 }
 
+/* ===== JARAK KONSISTEN ===== */
+
+/* Jarak banner ke section pertama */
+.banner {
+  margin-bottom: 35px;
+}
+
+/* Jarak antar section */
+section + section {
+  margin-top: 35px;
+}
+
+/* Jarak section terakhir ke footer */
+footer {
+  margin-top: 40px;
+}
+
+/* Responsif supaya tidak terlalu melebar di HP */
+@media (max-width: 600px) {
+  main {
+    padding: 20px;
+  }
+  section {
+    padding: 20px;
+  }
+}
 
 
 
