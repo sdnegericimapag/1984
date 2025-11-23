@@ -1,22 +1,116 @@
-
-body { margin:0; font-family:Arial, sans-serif; background:#f1f4f9; }
-header { background:#004a99; color:white; padding:15px 30px; display:flex; justify-content:space-between; align-items:center; }
-header .logo { font-size:22px; font-weight:bold; }
-nav a { color:white; margin-left:15px; text-decoration:none; font-weight:bold; }
-nav a:hover { text-decoration:underline; }
-.banner { background:#0066cc; padding:40px; text-align:center; color:white; }
-main { padding:20px 30px; }
-section { background:white; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-footer { background:#003366; color:white; text-align:center; padding:15px; margin-top:40px; }
-.logo {
-    display: flex;
-    align-items: center;
-    font-size: 22px;
-    font-weight: bold;
+/* ===== GLOBAL STYLE ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
 }
 
-.logo img {
-    height: 45px; /* ukuran logo */
-    margin-right: 10px; /* jarak antara logo dan tulisan */
+/* ===== HEADER ===== */
+header {
+  background: #0b57cf;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* Logo */
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
+header .logo img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+}
+
+/* ===== NAV ===== */
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a,
+nav .dropbtn {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 170px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  color: #004a99;
+  text-decoration: none;
+  font-weight: bold;
+}
+.dropdown-content a:hover {
+  background: #e6f0ff;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== BANNER ===== */
+.banner {
+  width: 100%;
+  height: 240px;
+  background: url('img/bannercmpg.jpg') center/cover no-repeat;
+  position: relative;
+}
+.banner-text {
+  position: absolute;
+  right: 60px;
+  bottom: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+  text-shadow: 
+    0 3px 6px rgba(255,255,255,0.7),
+    0 0 10px rgba(0,0,0,0.6);
+}
+
+/* ===== CONTENT ===== */
+main {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+section {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin-bottom: 25px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0b57cf;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
