@@ -118,7 +118,7 @@ footer {
 /* Gaya untuk semua judul h2 */
 section h2 {
   display: inline-block;
-  margin-bottom: 12px;
+  margin-bottom: 3px;
   padding-bottom: 6px;
   font-size: 28px;
   font-weight: 700;
