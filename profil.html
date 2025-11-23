@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Profil SD Negeri Cimapag</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SD Negeri Cimapag</title>
+  <link rel="stylesheet" href="style.css">
   <style>
+    /* ===== CSS DROPDOWN ===== */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -35,7 +37,7 @@
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
-    }	
+    }
     .banner {
   width: 100%;
   background: url('img/bannercmpg.jpg') center/cover no-repeat;
@@ -54,45 +56,84 @@
     0 3px 6px rgba(221,221,221,221.0),
     0 0 10px rgba(0,0,0,0.6);
 }
-    main {
-      padding: 40px;
-      max-width: 1100px;
-      margin: auto;
+
+    .dropdown {
+      position: relative;
     }
-    section {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      margin-bottom: 25px;
-    }
-    footer {
-      background: #0b57cf;
+
+    .dropbtn {
       color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0;
+      margin-left: 15px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 160px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 100;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 16px;
+      color: #004a99;
+      text-decoration: none;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #e6f0ff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      color: #d2e6ff;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="img/logosekolah.png" alt="Logo Sekolah" />
-      SD NEGERI CIMAPAG
-    </div>
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="profil.html">Profil</a>
-      <a href="guru.html">Guru</a>
-      <a href="kegiatan.html">Kegiatan</a>
-      <a href="dokumentasi.html">Dokumentasi</a>
-      <a href="kontak">Kontak</a>
-    </nav>
-  </header>
+  <div class="logo">
+    <img src="img/logosekolah.png" alt="Logo Sekolah" />
+    SD NEGERI CIMAPAG
+  </div>
 
-  <div class="banner">
-  <div class="banner-text">Profil</div>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="guru.html">Guru</a>
+
+    <div class="dropdown">
+      <span class="dropbtn">Kegiatan ▼</span>
+      <div class="dropdown-content">
+        <a href="kegiatan-belajar.html">Kegiatan Belajar</a>
+        <a href="ekstrakurikuler.html">Ekstrakurikuler</a>
+        <a href="prestasi.html">Prestasi</a>
+        <a href="agenda.html">Agenda Sekolah</a>
+      </div>
+    </div>
+
+    <a href="dokumentasi.html">Dokumentasi</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<!-- Banner seragam -->
+<div class="banner">
+  <div class="banner-text">Judul Halaman</div>
 </div>
 
 
@@ -149,6 +190,7 @@
   <footer>© 2025 SD NEGERI CIMAPAG — All Rights Reserved</footer>
 </body>
 </html>
+
 
 
 
